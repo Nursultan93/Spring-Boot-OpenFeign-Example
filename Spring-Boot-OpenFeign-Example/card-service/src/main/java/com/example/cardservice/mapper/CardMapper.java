@@ -17,6 +17,7 @@ public interface CardMapper {
     @Mapping(target = "pan", source = "pan")
     @Mapping(target = "expDate", source = "expDate")
     @Mapping(target = "cvv", source = "cvv")
+    @Mapping(target = "balance", source = "balance")
     @Mapping(target = "customer.id", source = "customerId")
     Card cardRequestToCard(CardRequest request);
 
@@ -24,5 +25,6 @@ public interface CardMapper {
     @Mapping(target = "pan", source = "pan")
     @Mapping(target = "expDate", source = "expDate")
     @Mapping(target = "cvv", source = "cvv")
+    @Mapping(target = "balance", source = "balance")
     CardResponse cardtoCardResponse(Card card);
 }

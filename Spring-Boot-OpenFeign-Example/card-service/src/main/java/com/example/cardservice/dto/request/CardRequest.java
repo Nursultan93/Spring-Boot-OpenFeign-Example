@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 //@Data
 //@NoArgsConstructor
 //@AllArgsConstructor
@@ -12,9 +14,18 @@ public class CardRequest {
     private String expDate;
     private Integer cvv;
     private Long customerId;
+    private BigDecimal balance;
 
 
     public CardRequest() {
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public String getPan() {

@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 //@Data
 //@NoArgsConstructor
 //@AllArgsConstructor
@@ -14,8 +16,17 @@ public class CardResponse {
     private String pan;
     private String expDate;
     private Integer cvv;
+    private BigDecimal balance;
 
     public CardResponse() {
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public Long getId() {

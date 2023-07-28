@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "cards")
 //@Data
@@ -18,6 +20,7 @@ public class Card {
     private String pan;
     private String expDate;
     private Integer cvv;
+    private BigDecimal balance;
     @ManyToOne
     private Customer customer;
 
@@ -34,6 +37,15 @@ public class Card {
 
     public String getPan() {
         return pan;
+    }
+
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public void setPan(String pan) {
